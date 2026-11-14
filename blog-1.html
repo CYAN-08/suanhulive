@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何用 Github 零成本开发网站？ - CYAN-08's Homepage</title>
+<style>
+  /* 沿用 Web 1.0 极客风格 */
+  body {
+    background-color: #c0c0c0;
+    background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    margin: 8px;
+  }
+  a { color: #0000ee; text-decoration: underline; }
+  a:visited { color: #551a8b; }
+  a:hover { color: #ff0000; }
+  hr { border: 1px inset #808080; margin: 16px 0; }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 4px ridge #00838f;
+    padding: 0;
+  }
+  .header {
+    background: #00838f;
+    color: #ffff00;
+    text-align: center;
+    padding: 16px 8px;
+    font-family: "Courier New", monospace;
+  }
+  .header h1 { font-size: 24px; margin: 0; text-shadow: 2px 2px 0 #000000; }
+  
+  .nav {
+    background: #e0e0e0;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 6px 10px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .nav a { margin: 0 8px; }
+
+  .content { padding: 20px 24px; line-height: 1.8; }
+  
+  .post-meta {
+    font-size: 13px;
+    color: #666;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-family: "Courier New", monospace;
+  }
+  
+  .content p { margin: 12px 0; }
+  .content h3 { color: #00838f; font-family: "Courier New", monospace; font-size: 16px; margin-top: 24px; }
+
+  /* 复古代码块 */
+  .code-block {
+    background: #000000;
+    color: #00ff00;
+    padding: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    border: 2px inset #808080;
+    margin: 12px 0;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  
+  .tip-box {
+    background: #ffffcc;
+    border: 1px dashed #cc9900;
+    padding: 12px;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  .footer {
+    background: #e0e0e0;
+    border-top: 2px groove #00838f;
+    padding: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #404040;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <h1>★ MY BLOG ★</h1>
+  </div>
+
+  <div class="nav">
+    <a href="index.html">← 返回主页</a>
+  </div>
+
+  <div class="content">
+    <h2>如何用 Github 零成本开发网站？</h2>
+    <div class="post-meta">
+      发布时间：2026-11-15 | 作者：CYAN-08 | 分类：技术教程
+    </div>
+    
+    <p>你可能很难想象，你现在看到的这个网站（包括我的小说频道、这个复古的网页界面、甚至那个 403 留言板），完全是由一堆纯文本文件组成的，并且没有任何服务器成本。</p>
+    <p>这得益于 <b>GitHub Pages</b> 服务。今天这篇博客，我就来复盘一下，如何利用手头的电脑，在零成本的情况下，白嫖 GitHub 的服务器建一个自己的网站。</p>
+    
+    <h3>■ 第一步：注册并创建仓库</h3>
+    <p>如果你还没有 GitHub 账号，先去注册一个。然后点击右上角的 <b>+</b> 号，新建一个 Repository（仓库）。</p>
+    <p>如果你想要一个形如 <code>https://你的用户名.github.io</code> 的专属域名，仓库名必须严格填写为 <code>你的用户名.github.io</code>。并且确保仓库是 <b>Public</b>（公开）状态。</p>
+    
+    <h3>■ 第二步：写你的第一个网页</h3>
+    <p>你不需要安装任何复杂的软件。在仓库里点击 <b>Add file</b> → <b>Create new file</b>，文件名命名为 <code>index.html</code>。</p>
+    <p>把下面这段代码复制进去，这就是网页的骨架：</p>
+    
+    <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Site&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;这是我的第一个网站。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+
+    <h3>■ 第三步：开启 Pages 魔法</h3>
+    <p>光有代码不行，得让 GitHub 把它变成网页。进入仓库的 <b>Settings</b>（设置），在左侧边栏找到 <b>Pages</b>。</p>
+    <p>在 Build and deployment 下，把 Source 选为 <b>Deploy from a branch</b>。Branch 选择 <b>main</b>，文件夹保持 <code>/ (root)</code>，然后点击 <b>Save</b>。</p>
+    
+    <div class="tip-box">
+      <b>💡 极客小贴士：</b> 保存后别着急，GitHub 通常需要 1-2 分钟来构建和发布。等看到上面出现绿色提示框，说明网站已经上线了！
+    </div>
+
+    <h3>■ 第四步：装点你的门面</h3>
+    <p>到这里，一个最基础的网站就已经跑起来了。你可以像我一样，在本地写好 HTML、CSS 甚至 JavaScript，然后拖拽上传到 GitHub，覆盖之前的文件。每次提交后，网站都会自动更新。</p>
+
+    <p>没有域名费，没有服务器租用费，而且不用担心服务器被 DDoS 攻击（反正宕机了也是 GitHub 背锅）。这就是静态网站的极致魅力——用最纯粹的技术，白嫖最大的快乐。</p>
+    
+    <hr>
+    <p style="font-size: 13px; color: #666;">※ 除非另有声明，本文章采用 CC-BY-NC-SA 协议进行许可，转载请注明作者「CYAN-08」及原文链接。</p>
+  </div>
+
+  <div class="footer">
+    Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
