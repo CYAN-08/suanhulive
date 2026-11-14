@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Not Found - CYAN-08's Homepage</title>
+<style>
+  /* Web 1.0 经典样式 */
+  body {
+    background-color: #c0c0c0;
+    background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+  
+  a { color: #0000ee; text-decoration: underline; }
+  a:visited { color: #551a8b; }
+  a:hover { color: #ff0000; }
+  
+  .page {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    border: 4px ridge #00838f;
+    padding: 0;
+  }
+
+  .header {
+    background: #00838f;
+    color: #ffff00;
+    text-align: center;
+    padding: 16px 8px;
+    font-family: "Courier New", monospace;
+  }
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000000;
+  }
+
+  .content { padding: 32px 20px; text-align: center; }
+  
+  .error-code {
+    font-size: 64px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: #00838f;
+    text-shadow: 2px 2px 0 #c0c0c0;
+    margin-bottom: 16px;
+  }
+  
+  .msg {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .sub-msg {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+
+  /* 3D 凸起按钮 */
+  .btn95 {
+    display: inline-block;
+    background: #c0c0c0;
+    border: 3px outset #ffffff;
+    padding: 8px 24px;
+    font-family: "MS Gothic", "Courier New", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  .btn95:active {
+    border-style: inset;
+    background: #a0a0a0;
+  }
+  .btn95:hover { color: #000000; }
+
+  .footer {
+    background: #e0e0e0;
+    border-top: 2px groove #00838f;
+    padding: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #404040;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <h1>★ ERROR / 404 ★</h1>
+  </div>
+
+  <div class="content">
+    <div class="error-code">404</div>
+    <div class="msg">糟糕，页面走丢了！</div>
+    <div class="sub-msg">
+      你寻找的文件在这个服务器上不存在。<br>
+      请检查 URL 是否拼写正确，或者它已经被移除了。
+    </div>
+    
+    <p>
+      <a class="btn95" href="index.html">▶ 返回主页 (Go Home)</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
+    <span style="color:#808080;">HTTP/1.1 404 Not Found</span>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
