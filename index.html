@@ -141,7 +141,7 @@
   }
   .btn95:hover { color: #000000; }
 
-  /* 底部 90 年代徽章 */
+  /* 底部徽章 */
   .badge {
     display: inline-block;
     border: 2px outset #808080;
@@ -153,7 +153,6 @@
     text-decoration: none;
     color: #000;
   }
-  /* RSS 专属徽章颜色 */
   .badge-rss {
     background: #ff9900;
     color: #fff;
@@ -203,10 +202,31 @@
     box-shadow: inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.4);
   }
   .social-btn:active { box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4); }
-  
   .btn-bili { background: #fb7299; }
   .btn-yt { background: #ff0000; }
   .btn-gh { background: #24292e; }
+
+  /* ===== 版权与 CC 协议区域样式 ===== */
+  .copyright-area {
+    background: #f5fcfc;
+    border: 1px solid #a0a0a0;
+    padding: 20px 16px;
+    margin: 20px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* 针对官方 CC 图片的自适应缩放 */
+  .cc-img {
+    max-width: 240px; /* 将原图缩小以适应页面 */
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 12px;
+    border: none;
+  }
 
   .footer {
     background: #e0e0e0;
@@ -222,13 +242,11 @@
 
 <div class="page">
 
-  <!-- 头部 -->
   <div class="header">
     <h1>★ CYAN-08's HOMEPAGE ★</h1>
     <div class="sub">~ suanhulive ~</div>
   </div>
 
-  <!-- 导航 (增加了 RSS) -->
   <div class="nav">
     <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
     <a href="guestbook.html">留言板</a> |
@@ -237,18 +255,17 @@
     <a href="feed.xml" target="_blank" style="color:#ff6600; font-weight:bold;">📡 RSS</a>
   </div>
 
-  <!-- 滚动字幕 -->
   <div class="marquee-box">
-    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 快去看看我的小说吧！ ★★★ 本站已支持 RSS 订阅，欢迎使用阅读器追更！ ★★★</span>
+    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 快去看看我的小说吧！ ★★★ 本站文章已采用 CC-BY-NC-SA 协议进行许可。 ★★★</span>
   </div>
 
   <div class="content">
 
     <h2>■ 更新履历 (Updates)</h2>
     <p>
-      <span class="new">NEW!</span> 2026.11.14 本站支持 RSS 订阅！<br>
-      2026.11.14 添加 B站、YouTube 和 GitHub 主页链接！<br>
-      2026.11.14 添加 SkyLight 服务器友情链接！
+      <span class="new">NEW!</span> 2026.11.14 添加 CC 版权声明，保护原创权益！<br>
+      2026.11.14 本站支持 RSS 订阅！<br>
+      2026.11.14 添加 B站、YouTube 和 GitHub 主页链接！
     </p>
 
     <hr>
@@ -275,7 +292,6 @@
 
     <hr>
 
-    <!-- 全网足迹 -->
     <h2 id="social">■ 全网足迹 (Find Me Online)</h2>
     <div class="social-links">
       <a href="https://space.bilibili.com/3546584337877077" target="_blank" class="social-btn btn-bili">Bilibili</a>
@@ -285,7 +301,6 @@
 
     <hr>
 
-    <!-- 友情链接区域 -->
     <h2 id="links">■ 友情链接 (Friend Links)</h2>
     <div class="friend-link-box">
       <p style="margin:0 0 8px 0;">
@@ -307,9 +322,22 @@
       <span class="badge">HTML 3.2<br><b>Valid!</b></span>
     </p>
 
+    <hr>
+
+    <!-- ===== 版权与 CC 协议声明区 ===== -->
+    <div class="copyright-area">
+      <!-- 引用你的 cc.png 文件 -->
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+        <img src="cc.png" alt="CC BY-NC-SA 4.0" class="cc-img">
+      </a>
+      <p style="margin: 4px 0; font-weight: bold;">权利声明</p>
+      <p>除非注明，本博客所有文章皆为原创。</p>
+      <p>除非另有声明，本博客之原创文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" style="color:#0000ee;">CC-BY-NC-SA</a> 进行许可。</p>
+      <p style="color: #666; margin-top: 8px;">转载请同时注明原文链接和作者名字「CYAN-08」。</p>
+    </div>
+
   </div>
 
-  <!-- 底部 -->
   <div class="footer">
     Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
     <span style="color:#808080;">Last updated: 2026.11.14</span>
