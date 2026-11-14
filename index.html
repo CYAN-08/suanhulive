@@ -42,7 +42,7 @@
   .nav { background: #e0e0e0; border-top: 1px solid #808080; border-bottom: 1px solid #808080; padding: 6px 10px; font-size: 13px; text-align: center; }
   .nav a { margin: 0 8px; }
   .content { padding: 16px 20px; }
-  .content h2 { font-size: 18px; color: #00838f; border-bottom: 2px solid #00838f; padding-bottom: 4px; margin: 16px 0 8px; font-family: "Courier New", monospace; }
+  .content h2 { font-size: 18px; color: #00838f; border-bottom: 2px solid #00838f; padding-bottom: 4px; margin: 16px 0 8px; font-family: "Courier New", monospace; scroll-margin-top: 20px; }
   .content p { margin: 10px 0; line-height: 1.5; }
   ul { margin: 8px 0 8px 24px; }
   li { margin: 4px 0; }
@@ -87,6 +87,9 @@
   .cc-img { max-width: 240px; width: 100%; height: auto; display: inline-block; margin-bottom: 12px; }
 
   .footer { background: #e0e0e0; border-top: 2px groove #00838f; padding: 12px; text-align: center; font-size: 11px; color: #404040; }
+  /* 萌ICP备样式 */
+  .moe-icp { color: #808080; text-decoration: none; border-bottom: 1px dotted #808080; }
+  .moe-icp:hover { color: #00838f; border-bottom-color: #00838f; }
 </style>
 </head>
 <body>
@@ -118,12 +121,12 @@
     
     <!-- 这里的空 ul 会由底部的脚本自动生成 -->
     <ul class="blog-list" id="blog-container">
-      <li style="color:#666; font-style:italic;">正在扫描服务器寻找文章……</li>
+      <li style="color:#666; font-style:italic;">正在读取博客数据……</li>
     </ul>
 
     <hr>
 
-    <h2>■ 关于我 (About Me)</h2>
+    <h2 id="about">■ 关于我 (About Me)</h2>
     <ul>
       <li>网名：CYAN-08</li>
       <li>游戏ID：suanhu</li>
@@ -186,9 +189,11 @@
 
   </div>
 
+  <!-- 底部加上萌ICP备 -->
   <div class="footer">
     Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
-    <span style="color:#808080;">Last updated: 2026-11-15</span>
+    <a class="moe-icp" href="https://icp.gov.moe/?keyword=20260342" target="_blank">萌ICP备20260342号</a><br>
+    <span style="color:#808080;">Last updated: 2026-11-24</span>
   </div>
 
 </div>
