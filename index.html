@@ -87,6 +87,7 @@
   .cc-img { max-width: 240px; width: 100%; height: auto; display: inline-block; margin-bottom: 12px; }
 
   .footer { background: #e0e0e0; border-top: 2px groove #00838f; padding: 12px; text-align: center; font-size: 11px; color: #404040; }
+  
   /* 萌ICP备样式 */
   .moe-icp { color: #808080; text-decoration: none; border-bottom: 1px dotted #808080; }
   .moe-icp:hover { color: #00838f; border-bottom-color: #00838f; }
@@ -189,7 +190,7 @@
 
   </div>
 
-  <!-- 底部加上萌ICP备 -->
+  <!-- 底部包含萌ICP备 -->
   <div class="footer">
     Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
     <a class="moe-icp" href="https://icp.gov.moe/?keyword=20260342" target="_blank">萌ICP备20260342号</a><br>
@@ -198,17 +199,25 @@
 
 </div>
 
+<!-- ▼ 极客复古网易云悬浮播放器 ▼ -->
+<div id="netease-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; font-family: 'Courier New', monospace;">
+  <div id="player-toggle" onclick="toggleNeteasePlayer()" style="background: #c0c0c0; border: 3px outset #ffffff; padding: 6px 12px; font-size: 13px; font-weight: bold; cursor: pointer; user-select: none; box-shadow: 3px 3px 8px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 6px;">
+    <span id="toggle-icon">▶</span> 展开 BGM
+  </div>
+  <div id="player-iframe-container" style="display: none; margin-top: 8px; background: #c0c0c0; border: 3px outset #ffffff; padding: 4px; box-shadow: 3px 3px 8px rgba(0,0,0,0.3);">
+    <!-- 网易云外链代码，auto=0 避免被浏览器拦截 -->
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3340482534&auto=0&height=66"></iframe>
+  </div>
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ===================================================
-  // ▼ 极客自动化探测脚本 ▼
-  // ===================================================
+  // ▼ 极客自动化探测博客脚本 ▼
   const container = document.getElementById('blog-container');
-  const maxBlogs = 20; // 自动探测 blog-1 到 blog-20
+  const maxBlogs = 20; 
   let foundBlogs = [];
 
-  // 并发请求去测试文件是否存在
   let promises = [];
   for (let i = 1; i <= maxBlogs; i++) {
     let url = `blog-${i}.html`;
@@ -217,12 +226,9 @@
         .then(res => {
           if (res.ok) {
             return res.text().then(html => {
-              // 提取 <title> 标签里的内容
               let match = html.match(/<title>(.*?)<\/title>/i);
               let fullTitle = match ? match[1] : url;
-              // 把 " - CYAN-08's Homepage" 这部分后缀去掉
               let cleanTitle = fullTitle.replace(/\s*-\s*CYAN-08's Homepage/gi, '');
-              
               return { id: i, url: url, title: cleanTitle };
             });
           }
@@ -233,32 +239,38 @@
   }
 
   Promise.all(promises).then(results => {
-    // 过滤掉不存在的文件
     foundBlogs = results.filter(item => item !== null);
-    
-    // 按编号倒序排列（最新发布的数字最大，排在最前面）
     foundBlogs.sort((a, b) => b.id - a.id);
-
-    container.innerHTML = ''; // 清空提示
+    container.innerHTML = ''; 
 
     if (foundBlogs.length === 0) {
       container.innerHTML = '<li>博主很懒，还没有写任何文章……</li>';
       return;
     }
 
-    // 渲染列表
     foundBlogs.forEach((post, index) => {
       const li = document.createElement('li');
-      
-      // 排在最上面的第一篇文章加 NEW 标签
       let newBadge = (index === 0) ? '<span class="new">NEW!</span> ' : '';
-
-      li.innerHTML = `
-        <span class="blog-title">${newBadge}<a href="${post.url}">${post.title}</a></span>
-      `;
+      li.innerHTML = `<span class="blog-title">${newBadge}<a href="${post.url}">${post.title}</a></span>`;
       container.appendChild(li);
     });
   });
+
+  // ▼ 网易云播放器折叠逻辑 ▼
+  function toggleNeteasePlayer() {
+    const container = document.getElementById('player-iframe-container');
+    const btn = document.getElementById('player-toggle');
+    
+    if (container.style.display === 'none') {
+      container.style.display = 'block';
+      btn.innerHTML = '<span id="toggle-icon">▼</span> 收起 BGM';
+      btn.style.border = '3px inset #ffffff'; 
+    } else {
+      container.style.display = 'none';
+      btn.innerHTML = '<span id="toggle-icon">▶</span> 展开 BGM';
+      btn.style.border = '3px outset #ffffff'; 
+    }
+  }
 </script>
 
 </body>
