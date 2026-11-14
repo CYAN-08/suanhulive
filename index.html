@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYAN-08 | suanhulive</title>
+
+<!-- ▼ OGP 卡片配置 ▼ -->
+<meta name="description" content="CYAN-08 的个人空间。喜欢青色、Undertale、Minecraft，偶尔写写小说。">
+<meta property="og:title" content="CYAN-08 | suanhulive">
+<meta property="og:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
+<meta property="og:url" content="https://cyan-08.github.io/suanhulive/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cyan-08.github.io/suanhulive/ogp.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CYAN-08 | suanhulive">
+<meta name="twitter:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
+<meta name="twitter:image" content="https://cyan-08.github.io/suanhulive/ogp.png">
+<!-- ▲ OGP 卡片配置结束 ▲ -->
+
+<style>
+  /* 青色像素风主题 */
+  :root {
+    --bg: #0f1c1e;
+    --panel: #172b2f;
+    --text: #e0f2f1;
+    --accent: #00e5ff; /* 霓虹青色 */
+    --accent-dark: #00838f;
+    --line: #2a484d;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background-color: var(--bg);
+    /* 暗色像素网格背景 */
+    background-image: 
+      linear-gradient(var(--panel) 1px, transparent 1px),
+      linear-gradient(90deg, var(--panel) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: var(--text);
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  /* 顶部标题区 */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 40px;
+    color: var(--accent);
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 0 var(--accent-dark);
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    color: #8ab4b6;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  /* 卡片样式 */
+  .card {
+    background: var(--panel);
+    border: 2px solid var(--line);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.6);
+    border-color: var(--accent);
+  }
+
+  .card h2 {
+    font-size: 18px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    border-bottom: 2px dashed var(--line);
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  ul { list-style: none; }
+  li { margin-bottom: 10px; display: flex; align-items: baseline; }
+  li::before {
+    content: "■";
+    color: var(--accent);
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tag {
+    background: var(--accent-dark);
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 14px;
+    border: 1px solid var(--accent);
+  }
+
+  /* 小说按钮 */
+  .novel-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset -4px -4px 0 rgba(0,0,0,0.2);
+    transition: all 0.1s;
+  }
+  
+  .novel-btn:hover { background: #5cf7ff; }
+  
+  .novel-btn:active {
+    box-shadow: inset 4px 4px 0 rgba(0,0,0,0.2);
+    transform: translateY(2px);
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #557a7d;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>CYAN-08</h1>
+    <p>// WELCOME TO MY WORLD //</p>
+  </div>
+
+  <div class="card">
+    <h2>■ 关于我 / ABOUT</h2>
+    <ul>
+      <li>网名：CYAN-08</li>
+      <li>游戏名：suanhu</li>
+      <li>最喜欢：青色</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>■ 游戏 / GAMES</h2>
+    <div class="tags">
+      <span class="tag">Undertale</span>
+      <span class="tag">Minecraft</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>■ 我的小说 / NOVEL</h2>
+    <p style="margin-bottom: 16px; font-size: 15px;">
+      《なんだよ、別に好きじゃないんだからね！》<br>
+      <span style="color: #8ab4b6; font-size: 13px;">「什么嘛，我才不喜欢你嘞！」</span>
+    </p>
+    <!-- 跳转到旧仓库的小说站 -->
+    <a href="https://cyan-08.github.io/noodlefan/" class="novel-btn" target="_blank">[ 开始阅读 ]</a>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © 2026 CYAN-08. All rights reserved.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
