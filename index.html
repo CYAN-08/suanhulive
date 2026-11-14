@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CYAN-08's Homepage - Web 1.0</title>
 
-<!-- ▼ OGP 卡片配置（让分享时有预览图）▼ -->
+<!-- ▼ OGP 卡片配置 ▼ -->
 <meta name="description" content="CYAN-08 的个人空间。喜欢青色、Undertale、Minecraft，偶尔写写小说。">
 <meta property="og:title" content="CYAN-08 | suanhulive">
 <meta property="og:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
@@ -17,8 +17,11 @@
 <meta name="twitter:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
 <meta name="twitter:image" content="https://cyan-08.github.io/suanhulive/ogp.png">
 
+<!-- ▼ RSS 订阅配置 ▼ -->
+<link rel="alternate" type="application/rss+xml" title="CYAN-08's Homepage RSS" href="https://cyan-08.github.io/suanhulive/feed.xml">
+
 <style>
-  /* Web 1.0 经典灰底 + 青色点缀 */
+  /* Web 1.0 经典样式 */
   body {
     background-color: #c0c0c0;
     background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
@@ -34,16 +37,16 @@
   
   hr { border: 1px inset #808080; margin: 12px 0; }
 
-  /* 主容器：复古厚边框 */
+  /* 主容器 */
   .page {
     max-width: 720px;
     margin: 0 auto;
     background: #ffffff;
-    border: 4px ridge #00838f; /* 青色边框 */
+    border: 4px ridge #00838f;
     padding: 0;
   }
 
-  /* 头部：经典深青色底 + 黄字 */
+  /* 头部 */
   .header {
     background: #00838f;
     color: #ffff00;
@@ -73,8 +76,6 @@
     text-align: center;
   }
   .nav a { margin: 0 8px; }
-  /* 未建好的纯文本导航项 */
-  .nav .text-item { margin: 0 8px; color: #808080; }
 
   .content { padding: 16px 20px; }
   
@@ -88,7 +89,6 @@
   }
   
   .content p { margin: 10px 0; line-height: 1.5; }
-  
   ul { margin: 8px 0 8px 24px; }
   li { margin: 4px 0; }
 
@@ -101,10 +101,10 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* 滚动字幕 (Marquee) */
+  /* 滚动字幕 */
   .marquee-box {
     background: #000000;
-    color: #00e5ff; /* 霓虹青色字 */
+    color: #00e5ff;
     font-family: "Courier New", monospace;
     font-size: 13px;
     padding: 4px 0;
@@ -150,6 +150,15 @@
     font-size: 11px;
     font-family: Arial, sans-serif;
     margin: 2px;
+    text-decoration: none;
+    color: #000;
+  }
+  /* RSS 专属徽章颜色 */
+  .badge-rss {
+    background: #ff9900;
+    color: #fff;
+    border-color: #cc7a00;
+    font-weight: bold;
   }
 
   /* 友链专门样式 */
@@ -167,15 +176,37 @@
     text-decoration: none;
     border-bottom: 1px solid #00838f;
   }
-  .friend-link-box a:hover {
-    color: #ff0000;
-    border-bottom-color: #ff0000;
+  .friend-link-box a:hover { color: #ff0000; border-bottom-color: #ff0000; }
+  .friend-desc { font-size: 12px; color: #666; margin-top: 6px; }
+
+  /* 社交图标专区 */
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
   }
-  .friend-desc {
+  .social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 31px;
+    border: 1px solid #000;
+    font-family: Arial, sans-serif;
     font-size: 12px;
-    color: #666;
-    margin-top: 6px;
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #fff !important;
+    box-shadow: inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.4);
   }
+  .social-btn:active { box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4); }
+  
+  .btn-bili { background: #fb7299; }
+  .btn-yt { background: #ff0000; }
+  .btn-gh { background: #24292e; }
 
   .footer {
     background: #e0e0e0;
@@ -197,27 +228,27 @@
     <div class="sub">~ suanhulive ~</div>
   </div>
 
-  <!-- 导航 (友情链接已变更为真链接) -->
+  <!-- 导航 (增加了 RSS) -->
   <div class="nav">
-    <span class="text-item">主页</span> |
     <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
-    <span class="text-item">关于我</span> |
     <a href="guestbook.html">留言板</a> |
-    <a href="#links">友情链接</a>
+    <a href="#social">全网足迹</a> |
+    <a href="#links">友情链接</a> |
+    <a href="feed.xml" target="_blank" style="color:#ff6600; font-weight:bold;">📡 RSS</a>
   </div>
 
   <!-- 滚动字幕 -->
   <div class="marquee-box">
-    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 有更新啦，快去看看我的小说吧！ ★★★ 新增友情链接：SkyLight 我的世界服务器！ ★★★</span>
+    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 快去看看我的小说吧！ ★★★ 本站已支持 RSS 订阅，欢迎使用阅读器追更！ ★★★</span>
   </div>
 
   <div class="content">
 
     <h2>■ 更新履历 (Updates)</h2>
     <p>
-      <span class="new">NEW!</span> 2026.11.14 添加 SkyLight 服务器友情链接！<br>
-      2026.11.14 个人主页完全翻新，留言板测试上线！<br>
-      2026.11.01 买到了《Undertale》和《Minecraft》！
+      <span class="new">NEW!</span> 2026.11.14 本站支持 RSS 订阅！<br>
+      2026.11.14 添加 B站、YouTube 和 GitHub 主页链接！<br>
+      2026.11.14 添加 SkyLight 服务器友情链接！
     </p>
 
     <hr>
@@ -244,6 +275,16 @@
 
     <hr>
 
+    <!-- 全网足迹 -->
+    <h2 id="social">■ 全网足迹 (Find Me Online)</h2>
+    <div class="social-links">
+      <a href="https://space.bilibili.com/3546584337877077" target="_blank" class="social-btn btn-bili">Bilibili</a>
+      <a href="https://www.youtube.com/@suanhulive" target="_blank" class="social-btn btn-yt">YouTube</a>
+      <a href="https://github.com/CYAN-08" target="_blank" class="social-btn btn-gh">GitHub</a>
+    </div>
+
+    <hr>
+
     <!-- 友情链接区域 -->
     <h2 id="links">■ 友情链接 (Friend Links)</h2>
     <div class="friend-link-box">
@@ -260,10 +301,10 @@
 
     <h2>■ 本站徽章 (Web Rings)</h2>
     <p style="text-align:center;">
+      <a href="feed.xml" target="_blank" class="badge badge-rss">RSS<br>2.0</a>
       <span class="badge">Best viewed in<br><b>Netscape</b></span>
       <span class="badge">Made with<br><b>Notepad</b></span>
       <span class="badge">HTML 3.2<br><b>Valid!</b></span>
-      <span class="badge">Y2K<br><b>Ready?</b></span>
     </p>
 
   </div>
