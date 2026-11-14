@@ -152,6 +152,31 @@
     margin: 2px;
   }
 
+  /* 友链专门样式 */
+  .friend-link-box {
+    text-align: center;
+    border: 1px dashed #00838f;
+    padding: 12px;
+    background: #f5fcfc;
+    margin-top: 8px;
+  }
+  .friend-link-box a {
+    font-weight: bold;
+    font-size: 15px;
+    color: #00838f;
+    text-decoration: none;
+    border-bottom: 1px solid #00838f;
+  }
+  .friend-link-box a:hover {
+    color: #ff0000;
+    border-bottom-color: #ff0000;
+  }
+  .friend-desc {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+  }
+
   .footer {
     background: #e0e0e0;
     border-top: 2px groove #00838f;
@@ -172,27 +197,27 @@
     <div class="sub">~ suanhulive ~</div>
   </div>
 
-  <!-- 导航 (留言板已接通) -->
+  <!-- 导航 (友情链接已变更为真链接) -->
   <div class="nav">
     <span class="text-item">主页</span> |
     <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
     <span class="text-item">关于我</span> |
     <a href="guestbook.html">留言板</a> |
-    <span class="text-item">友情链接</span>
+    <a href="#links">友情链接</a>
   </div>
 
   <!-- 滚动字幕 -->
   <div class="marquee-box">
-    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 有更新啦，快去看看我的小说吧！ ★★★ 留言板已开启测试，欢迎参观！ ★★★</span>
+    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 有更新啦，快去看看我的小说吧！ ★★★ 新增友情链接：SkyLight 我的世界服务器！ ★★★</span>
   </div>
 
   <div class="content">
 
     <h2>■ 更新履历 (Updates)</h2>
     <p>
-      <span class="new">NEW!</span> 2026.11.14 个人主页完全翻新，留言板测试上线！<br>
-      2026.11.01 买到了《Undertale》和《Minecraft》！<br>
-      2026.10.20 主页建造中……
+      <span class="new">NEW!</span> 2026.11.14 添加 SkyLight 服务器友情链接！<br>
+      2026.11.14 个人主页完全翻新，留言板测试上线！<br>
+      2026.11.01 买到了《Undertale》和《Minecraft》！
     </p>
 
     <hr>
@@ -214,13 +239,26 @@
       （什么嘛，我才不喜欢你嘞！）
     </p>
     <p style="text-align:center;">
-      <!-- 小说按钮 -->
       <a class="btn95" href="https://cyan-08.github.io/noodlefan/" target="_blank">▶ 开始阅读 (Click Here)</a>
     </p>
 
     <hr>
 
-    <h2>■ 友情链接与徽章 (Web Rings)</h2>
+    <!-- 友情链接区域 -->
+    <h2 id="links">■ 友情链接 (Friend Links)</h2>
+    <div class="friend-link-box">
+      <p style="margin:0 0 8px 0;">
+        🔗 <a href="https://skylight.mysxl.cn/" target="_blank">SkyLight 服务器官网</a>
+      </p>
+      <p class="friend-desc">
+        Minecraft 服务器<br>
+        点击上方链接访问
+      </p>
+    </div>
+
+    <hr>
+
+    <h2>■ 本站徽章 (Web Rings)</h2>
     <p style="text-align:center;">
       <span class="badge">Best viewed in<br><b>Netscape</b></span>
       <span class="badge">Made with<br><b>Notepad</b></span>
@@ -238,7 +276,6 @@
 
 </div>
 
-<!-- 自动获取当前年份的脚本 -->
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
