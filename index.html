@@ -3,199 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CYAN-08 | suanhulive</title>
+<title>CYAN-08's Homepage - Web 1.0</title>
 
-<!-- ▼ OGP 卡片配置 ▼ -->
+<!-- ▼ OGP 卡片配置（让分享时有预览图）▼ -->
 <meta name="description" content="CYAN-08 的个人空间。喜欢青色、Undertale、Minecraft，偶尔写写小说。">
 <meta property="og:title" content="CYAN-08 | suanhulive">
 <meta property="og:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
 <meta property="og:url" content="https://cyan-08.github.io/suanhulive/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://cyan-08.github.io/suanhulive/ogp.png">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CYAN-08 | suanhulive">
 <meta name="twitter:description" content="喜欢青色、Undertale、Minecraft，偶尔写写小说。">
 <meta name="twitter:image" content="https://cyan-08.github.io/suanhulive/ogp.png">
-<!-- ▲ OGP 卡片配置结束 ▲ -->
 
 <style>
-  /* 青色像素风主题 */
-  :root {
-    --bg: #0f1c1e;
-    --panel: #172b2f;
-    --text: #e0f2f1;
-    --accent: #00e5ff; /* 霓虹青色 */
-    --accent-dark: #00838f;
-    --line: #2a484d;
-  }
-  
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
+  /* Web 1.0 经典灰底 + 青色点缀 */
   body {
-    background-color: var(--bg);
-    /* 暗色像素网格背景 */
-    background-image: 
-      linear-gradient(var(--panel) 1px, transparent 1px),
-      linear-gradient(90deg, var(--panel) 1px, transparent 1px);
-    background-size: 30px 30px;
-    color: var(--text);
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.8;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+    background-color: #c0c0c0;
+    background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    margin: 8px;
+  }
+  
+  a { color: #0000ee; text-decoration: underline; }
+  a:visited { color: #551a8b; }
+  a:hover { color: #ff0000; }
+  
+  hr { border: 1px inset #808080; margin: 12px 0; }
+
+  /* 主容器：复古厚边框 */
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 4px ridge #00838f; /* 青色边框 */
+    padding: 0;
   }
 
-  .container {
-    max-width: 680px;
-    width: 100%;
-  }
-
-  /* 顶部标题区 */
+  /* 头部：经典深青色底 + 黄字 */
   .header {
+    background: #00838f;
+    color: #ffff00;
     text-align: center;
-    margin-bottom: 40px;
+    padding: 16px 8px;
+    font-family: "Courier New", monospace;
   }
-  
   .header h1 {
-    font-size: 40px;
-    color: var(--accent);
-    letter-spacing: 4px;
-    text-shadow: 3px 3px 0 var(--accent-dark);
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    color: #8ab4b6;
-    font-size: 14px;
+    font-size: 28px;
+    margin: 0;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000000;
+  }
+  .header .sub {
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 6px;
   }
 
-  /* 卡片样式 */
-  .card {
-    background: var(--panel);
-    border: 2px solid var(--line);
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.6);
-    border-color: var(--accent);
-  }
-
-  .card h2 {
-    font-size: 18px;
-    color: var(--accent);
-    margin-bottom: 16px;
-    border-bottom: 2px dashed var(--line);
-    padding-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  ul { list-style: none; }
-  li { margin-bottom: 10px; display: flex; align-items: baseline; }
-  li::before {
-    content: "■";
-    color: var(--accent);
-    margin-right: 10px;
-    font-size: 12px;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .tag {
-    background: var(--accent-dark);
-    color: #fff;
-    padding: 4px 10px;
-    font-size: 14px;
-    border: 1px solid var(--accent);
-  }
-
-  /* 小说按钮 */
-  .novel-btn {
-    display: block;
-    width: 100%;
+  /* 导航栏 */
+  .nav {
+    background: #e0e0e0;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 6px 10px;
+    font-size: 13px;
     text-align: center;
-    background: var(--accent);
-    color: var(--bg);
-    text-decoration: none;
+  }
+  .nav a { margin: 0 8px; }
+  /* 未建好的纯文本导航项 */
+  .nav .text-item { margin: 0 8px; color: #808080; }
+
+  .content { padding: 16px 20px; }
+  
+  .content h2 {
     font-size: 18px;
-    font-weight: bold;
-    padding: 16px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    box-shadow: inset -4px -4px 0 rgba(0,0,0,0.2);
-    transition: all 0.1s;
+    color: #00838f;
+    border-bottom: 2px solid #00838f;
+    padding-bottom: 4px;
+    margin: 16px 0 8px;
+    font-family: "Courier New", monospace;
   }
   
-  .novel-btn:hover { background: #5cf7ff; }
+  .content p { margin: 10px 0; line-height: 1.5; }
   
-  .novel-btn:active {
-    box-shadow: inset 4px 4px 0 rgba(0,0,0,0.2);
-    transform: translateY(2px);
+  ul { margin: 8px 0 8px 24px; }
+  li { margin: 4px 0; }
+
+  /* 闪烁的 NEW! */
+  .new {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 12px;
+    animation: blink 1s step-start infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* 滚动字幕 (Marquee) */
+  .marquee-box {
+    background: #000000;
+    color: #00e5ff; /* 霓虹青色字 */
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    padding: 4px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px 0;
+  }
+  .marquee-box span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 15s linear infinite;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200%); }
+  }
+
+  /* 3D 凸起按钮 */
+  .btn95 {
+    display: inline-block;
+    background: #c0c0c0;
+    border: 3px outset #ffffff;
+    padding: 6px 20px;
+    font-family: "MS Gothic", "Courier New", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  .btn95:active {
+    border-style: inset;
+    background: #a0a0a0;
+  }
+  .btn95:hover { color: #000000; }
+
+  /* 底部 90 年代徽章 */
+  .badge {
+    display: inline-block;
+    border: 2px outset #808080;
+    background: #e0e0e0;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    margin: 2px;
   }
 
   .footer {
+    background: #e0e0e0;
+    border-top: 2px groove #00838f;
+    padding: 12px;
     text-align: center;
-    font-size: 12px;
-    color: #557a7d;
-    margin-top: 40px;
+    font-size: 11px;
+    color: #404040;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="page">
 
+  <!-- 头部 -->
   <div class="header">
-    <h1>CYAN-08</h1>
-    <p>// WELCOME TO MY WORLD //</p>
+    <h1>★ CYAN-08's HOMEPAGE ★</h1>
+    <div class="sub">~ suanhulive ~</div>
   </div>
 
-  <div class="card">
-    <h2>■ 关于我 / ABOUT</h2>
+  <!-- 导航 (留言板已接通) -->
+  <div class="nav">
+    <span class="text-item">主页</span> |
+    <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
+    <span class="text-item">关于我</span> |
+    <a href="guestbook.html">留言板</a> |
+    <span class="text-item">友情链接</span>
+  </div>
+
+  <!-- 滚动字幕 -->
+  <div class="marquee-box">
+    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 有更新啦，快去看看我的小说吧！ ★★★ 留言板已开启测试，欢迎参观！ ★★★</span>
+  </div>
+
+  <div class="content">
+
+    <h2>■ 更新履历 (Updates)</h2>
+    <p>
+      <span class="new">NEW!</span> 2026.11.14 个人主页完全翻新，留言板测试上线！<br>
+      2026.11.01 买到了《Undertale》和《Minecraft》！<br>
+      2026.10.20 主页建造中……
+    </p>
+
+    <hr>
+
+    <h2>■ 关于我 (About Me)</h2>
     <ul>
       <li>网名：CYAN-08</li>
-      <li>游戏名：suanhu</li>
-      <li>最喜欢：青色</li>
+      <li>游戏ID：suanhu</li>
+      <li>最喜欢的颜色：青色 (Cyan) 💠</li>
+      <li>最喜欢的游戏：Undertale, Minecraft</li>
     </ul>
-  </div>
 
-  <div class="card">
-    <h2>■ 游戏 / GAMES</h2>
-    <div class="tags">
-      <span class="tag">Undertale</span>
-      <span class="tag">Minecraft</span>
-    </div>
-  </div>
+    <hr>
 
-  <div class="card">
-    <h2>■ 我的小说 / NOVEL</h2>
-    <p style="margin-bottom: 16px; font-size: 15px;">
-      《なんだよ、別に好きじゃないんだからね！》<br>
-      <span style="color: #8ab4b6; font-size: 13px;">「什么嘛，我才不喜欢你嘞！」</span>
+    <h2>■ 我的小说 (My Novel)</h2>
+    <p>
+      这是我自己写的小说，请多指教！<br>
+      <b>《なんだよ、別に好きじゃないんだからね！》</b><br>
+      （什么嘛，我才不喜欢你嘞！）
     </p>
-    <!-- 跳转到旧仓库的小说站 -->
-    <a href="https://cyan-08.github.io/noodlefan/" class="novel-btn" target="_blank">[ 开始阅读 ]</a>
+    <p style="text-align:center;">
+      <!-- 小说按钮 -->
+      <a class="btn95" href="https://cyan-08.github.io/noodlefan/" target="_blank">▶ 开始阅读 (Click Here)</a>
+    </p>
+
+    <hr>
+
+    <h2>■ 友情链接与徽章 (Web Rings)</h2>
+    <p style="text-align:center;">
+      <span class="badge">Best viewed in<br><b>Netscape</b></span>
+      <span class="badge">Made with<br><b>Notepad</b></span>
+      <span class="badge">HTML 3.2<br><b>Valid!</b></span>
+      <span class="badge">Y2K<br><b>Ready?</b></span>
+    </p>
+
   </div>
 
+  <!-- 底部 -->
   <div class="footer">
-    <p>Copyright © 2026 CYAN-08. All rights reserved.</p>
+    Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
+    <span style="color:#808080;">Last updated: 2026.11.14</span>
   </div>
 
 </div>
+
+<!-- 自动获取当前年份的脚本 -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
