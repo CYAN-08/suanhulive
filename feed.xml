@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>CYAN-08's Homepage</title>
+  <link>https://cyan-08.github.io/suanhulive/</link>
+  <description>CYAN-08 的个人空间。喜欢青色、Undertale、Minecraft，偶尔写写小说。</description>
+  <language>zh-CN</language>
+  <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate>
+  <atom:link href="https://cyan-08.github.io/suanhulive/feed.xml" rel="self" type="application/rss+xml" />
+
+  <!-- 网站更新记录 1 -->
+  <item>
+    <title>添加 B站、YouTube 和 GitHub 主页链接</title>
+    <link>https://cyan-08.github.io/suanhulive/</link>
+    <guid>https://cyan-08.github.io/suanhulive/#update-1</guid>
+    <pubDate>Sat, 14 Nov 2026 12:00:00 +0800</pubDate>
+    <description>在主页新增了“全网足迹”板块，方便大家找到我的各个平台账号。</description>
+  </item>
+
+  <!-- 小说更新记录 -->
+  <item>
+    <title>小说《なんだよ、別に好きじゃないんだからね！》上线</title>
+    <link>https://cyan-08.github.io/noodlefan/</link>
+    <guid>https://cyan-08.github.io/noodlefan/</guid>
+    <pubDate>Sat, 14 Nov 2026 10:00:00 +0800</pubDate>
+    <description>六岁时的恶霸，九年后却变成了温柔的转校生。我的最新小说现已发布，欢迎阅读！</description>
+  </item>
+
+  <!-- 留言板上线记录 -->
+  <item>
+    <title>留言板测试上线</title>
+    <link>https://cyan-08.github.io/suanhulive/guestbook.html</link>
+    <guid>https://cyan-08.github.io/suanhulive/guestbook.html</guid>
+    <pubDate>Sat, 14 Nov 2026 08:00:00 +0800</pubDate>
+    <description>新的留言板已开放参观。</description>
+  </item>
+</channel>
+</rss>
