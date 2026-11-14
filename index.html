@@ -30,212 +30,63 @@
     font-size: 16px;
     margin: 8px;
   }
-  
   a { color: #0000ee; text-decoration: underline; }
   a:visited { color: #551a8b; }
   a:hover { color: #ff0000; }
-  
   hr { border: 1px inset #808080; margin: 12px 0; }
 
-  /* 主容器 */
-  .page {
-    max-width: 720px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 4px ridge #00838f;
-    padding: 0;
-  }
-
-  /* 头部 */
-  .header {
-    background: #00838f;
-    color: #ffff00;
-    text-align: center;
-    padding: 16px 8px;
-    font-family: "Courier New", monospace;
-  }
-  .header h1 {
-    font-size: 28px;
-    margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0 #000000;
-  }
-  .header .sub {
-    font-size: 13px;
-    color: #ffffff;
-    margin-top: 6px;
-  }
-
-  /* 导航栏 */
-  .nav {
-    background: #e0e0e0;
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    padding: 6px 10px;
-    font-size: 13px;
-    text-align: center;
-  }
+  .page { max-width: 720px; margin: 0 auto; background: #ffffff; border: 4px ridge #00838f; padding: 0; }
+  .header { background: #00838f; color: #ffff00; text-align: center; padding: 16px 8px; font-family: "Courier New", monospace; }
+  .header h1 { font-size: 28px; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 0 #000000; }
+  .header .sub { font-size: 13px; color: #ffffff; margin-top: 6px; }
+  .nav { background: #e0e0e0; border-top: 1px solid #808080; border-bottom: 1px solid #808080; padding: 6px 10px; font-size: 13px; text-align: center; }
   .nav a { margin: 0 8px; }
-
   .content { padding: 16px 20px; }
-  
-  .content h2 {
-    font-size: 18px;
-    color: #00838f;
-    border-bottom: 2px solid #00838f;
-    padding-bottom: 4px;
-    margin: 16px 0 8px;
-    font-family: "Courier New", monospace;
-  }
-  
+  .content h2 { font-size: 18px; color: #00838f; border-bottom: 2px solid #00838f; padding-bottom: 4px; margin: 16px 0 8px; font-family: "Courier New", monospace; }
   .content p { margin: 10px 0; line-height: 1.5; }
   ul { margin: 8px 0 8px 24px; }
   li { margin: 4px 0; }
 
-  /* 闪烁的 NEW! */
-  .new {
-    color: #ff0000;
-    font-weight: bold;
-    font-size: 12px;
-    animation: blink 1s step-start infinite;
-  }
+  /* 闪烁 NEW */
+  .new { color: #ff0000; font-weight: bold; font-size: 12px; animation: blink 1s step-start infinite; }
   @keyframes blink { 50% { opacity: 0; } }
 
   /* 滚动字幕 */
-  .marquee-box {
-    background: #000000;
-    color: #00e5ff;
-    font-family: "Courier New", monospace;
-    font-size: 13px;
-    padding: 4px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 10px 0;
-  }
-  .marquee-box span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll 15s linear infinite;
-  }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-200%); }
-  }
+  .marquee-box { background: #000000; color: #00e5ff; font-family: "Courier New", monospace; font-size: 13px; padding: 4px 0; overflow: hidden; white-space: nowrap; margin: 10px 0; }
+  .marquee-box span { display: inline-block; padding-left: 100%; animation: scroll 15s linear infinite; }
+  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-200%); } }
 
-  /* 3D 凸起按钮 */
-  .btn95 {
-    display: inline-block;
-    background: #c0c0c0;
-    border: 3px outset #ffffff;
-    padding: 6px 20px;
-    font-family: "MS Gothic", "Courier New", monospace;
-    font-size: 15px;
-    font-weight: bold;
-    color: #000000;
-    text-decoration: none;
-    margin: 8px 0;
-  }
-  .btn95:active {
-    border-style: inset;
-    background: #a0a0a0;
-  }
+  /* 3D 按钮 */
+  .btn95 { display: inline-block; background: #c0c0c0; border: 3px outset #ffffff; padding: 6px 20px; font-family: "MS Gothic", "Courier New", monospace; font-size: 15px; font-weight: bold; color: #000000; text-decoration: none; margin: 8px 0; }
+  .btn95:active { border-style: inset; background: #a0a0a0; }
   .btn95:hover { color: #000000; }
 
-  /* 底部徽章 */
-  .badge {
-    display: inline-block;
-    border: 2px outset #808080;
-    background: #e0e0e0;
-    padding: 4px 8px;
-    font-size: 11px;
-    font-family: Arial, sans-serif;
-    margin: 2px;
-    text-decoration: none;
-    color: #000;
-  }
-  .badge-rss {
-    background: #ff9900;
-    color: #fff;
-    border-color: #cc7a00;
-    font-weight: bold;
-  }
+  /* 徽章 */
+  .badge { display: inline-block; border: 2px outset #808080; background: #e0e0e0; padding: 4px 8px; font-size: 11px; font-family: Arial, sans-serif; margin: 2px; text-decoration: none; color: #000; }
+  .badge-rss { background: #ff9900; color: #fff; border-color: #cc7a00; font-weight: bold; }
 
-  /* 友链专门样式 */
-  .friend-link-box {
-    text-align: center;
-    border: 1px dashed #00838f;
-    padding: 12px;
-    background: #f5fcfc;
-    margin-top: 8px;
-  }
-  .friend-link-box a {
-    font-weight: bold;
-    font-size: 15px;
-    color: #00838f;
-    text-decoration: none;
-    border-bottom: 1px solid #00838f;
-  }
+  .friend-link-box { text-align: center; border: 1px dashed #00838f; padding: 12px; background: #f5fcfc; margin-top: 8px; }
+  .friend-link-box a { font-weight: bold; font-size: 15px; color: #00838f; text-decoration: none; border-bottom: 1px solid #00838f; }
   .friend-link-box a:hover { color: #ff0000; border-bottom-color: #ff0000; }
   .friend-desc { font-size: 12px; color: #666; margin-top: 6px; }
 
-  /* 社交图标专区 */
-  .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 10px;
-  }
-  .social-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 88px;
-    height: 31px;
-    border: 1px solid #000;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none !important;
-    color: #fff !important;
-    box-shadow: inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.4);
-  }
+  .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+  .social-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 88px; height: 31px; border: 1px solid #000; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-decoration: none !important; color: #fff !important; box-shadow: inset -2px -2px 0 rgba(0,0,0,0.4), inset 2px 2px 0 rgba(255,255,255,0.4); }
   .social-btn:active { box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4); }
   .btn-bili { background: #fb7299; }
   .btn-yt { background: #ff0000; }
   .btn-gh { background: #24292e; }
 
-  /* ===== 版权与 CC 协议区域样式 ===== */
-  .copyright-area {
-    background: #f5fcfc;
-    border: 1px solid #a0a0a0;
-    padding: 20px 16px;
-    margin: 20px 0;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* 针对官方 CC 图片的自适应缩放 */
-  .cc-img {
-    max-width: 240px; /* 将原图缩小以适应页面 */
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    margin-bottom: 12px;
-    border: none;
-  }
+  /* 博客文章列表样式 */
+  .blog-list { list-style: none; padding: 0; margin: 10px 0; }
+  .blog-list li { margin-bottom: 12px; display: flex; align-items: baseline; padding: 6px; border-bottom: 1px dashed #e0e0e0; }
+  .blog-title { font-weight: bold; font-size: 15px; }
 
-  .footer {
-    background: #e0e0e0;
-    border-top: 2px groove #00838f;
-    padding: 12px;
-    text-align: center;
-    font-size: 11px;
-    color: #404040;
-  }
+  /* 版权区 */
+  .copyright-area { background: #f5fcfc; border: 1px solid #a0a0a0; padding: 20px 16px; margin: 20px 0; font-size: 13px; line-height: 1.6; color: #333; text-align: center; }
+  .cc-img { max-width: 240px; width: 100%; height: auto; display: inline-block; margin-bottom: 12px; }
+
+  .footer { background: #e0e0e0; border-top: 2px groove #00838f; padding: 12px; text-align: center; font-size: 11px; color: #404040; }
 </style>
 </head>
 <body>
@@ -248,6 +99,7 @@
   </div>
 
   <div class="nav">
+    <a href="#blog">博客</a> |
     <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
     <a href="guestbook.html">留言板</a> |
     <a href="#social">全网足迹</a> |
@@ -256,17 +108,18 @@
   </div>
 
   <div class="marquee-box">
-    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站使用 Netscape Navigator 4.0 浏览效果最佳。 ★★★ 快去看看我的小说吧！ ★★★ 本站文章已采用 CC-BY-NC-SA 协议进行许可。 ★★★</span>
+    <span>★★★ 欢迎来到 CYAN-08 的个人主页！本站现已开通博客，欢迎阅读！ ★★★ 快去看看我的小说吧！ ★★★ 本站文章已采用 CC-BY-NC-SA 协议进行许可。 ★★★</span>
   </div>
 
   <div class="content">
 
-    <h2>■ 更新履历 (Updates)</h2>
-    <p>
-      <span class="new">NEW!</span> 2026.11.14 添加 CC 版权声明，保护原创权益！<br>
-      2026.11.14 本站支持 RSS 订阅！<br>
-      2026.11.14 添加 B站、YouTube 和 GitHub 主页链接！
-    </p>
+    <!-- 博客区域 -->
+    <h2 id="blog">■ 博客文章 (My Blog)</h2>
+    
+    <!-- 这里的空 ul 会由底部的脚本自动生成 -->
+    <ul class="blog-list" id="blog-container">
+      <li style="color:#666; font-style:italic;">正在扫描服务器寻找文章……</li>
+    </ul>
 
     <hr>
 
@@ -306,10 +159,7 @@
       <p style="margin:0 0 8px 0;">
         🔗 <a href="https://skylight.mysxl.cn/" target="_blank">SkyLight 服务器官网</a>
       </p>
-      <p class="friend-desc">
-        Minecraft 服务器<br>
-        点击上方链接访问
-      </p>
+      <p class="friend-desc">Minecraft 服务器<br>点击上方链接访问</p>
     </div>
 
     <hr>
@@ -324,9 +174,7 @@
 
     <hr>
 
-    <!-- ===== 版权与 CC 协议声明区 ===== -->
     <div class="copyright-area">
-      <!-- 引用你的 cc.png 文件 -->
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
         <img src="cc.png" alt="CC BY-NC-SA 4.0" class="cc-img">
       </a>
@@ -340,13 +188,72 @@
 
   <div class="footer">
     Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
-    <span style="color:#808080;">Last updated: 2026.11.14</span>
+    <span style="color:#808080;">Last updated: 2026-11-15</span>
   </div>
 
 </div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===================================================
+  // ▼ 极客自动化探测脚本 ▼
+  // ===================================================
+  const container = document.getElementById('blog-container');
+  const maxBlogs = 20; // 自动探测 blog-1 到 blog-20
+  let foundBlogs = [];
+
+  // 并发请求去测试文件是否存在
+  let promises = [];
+  for (let i = 1; i <= maxBlogs; i++) {
+    let url = `blog-${i}.html`;
+    promises.push(
+      fetch(url)
+        .then(res => {
+          if (res.ok) {
+            return res.text().then(html => {
+              // 提取 <title> 标签里的内容
+              let match = html.match(/<title>(.*?)<\/title>/i);
+              let fullTitle = match ? match[1] : url;
+              // 把 " - CYAN-08's Homepage" 这部分后缀去掉
+              let cleanTitle = fullTitle.replace(/\s*-\s*CYAN-08's Homepage/gi, '');
+              
+              return { id: i, url: url, title: cleanTitle };
+            });
+          }
+          return null;
+        })
+        .catch(() => null)
+    );
+  }
+
+  Promise.all(promises).then(results => {
+    // 过滤掉不存在的文件
+    foundBlogs = results.filter(item => item !== null);
+    
+    // 按编号倒序排列（最新发布的数字最大，排在最前面）
+    foundBlogs.sort((a, b) => b.id - a.id);
+
+    container.innerHTML = ''; // 清空提示
+
+    if (foundBlogs.length === 0) {
+      container.innerHTML = '<li>博主很懒，还没有写任何文章……</li>';
+      return;
+    }
+
+    // 渲染列表
+    foundBlogs.forEach((post, index) => {
+      const li = document.createElement('li');
+      
+      // 排在最上面的第一篇文章加 NEW 标签
+      let newBadge = (index === 0) ? '<span class="new">NEW!</span> ' : '';
+
+      li.innerHTML = `
+        <span class="blog-title">${newBadge}<a href="${post.url}">${post.title}</a></span>
+      `;
+      container.appendChild(li);
+    });
+  });
 </script>
 
 </body>
