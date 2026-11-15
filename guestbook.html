@@ -5,197 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>留言板 - CYAN-08's Homepage</title>
 <style>
-  /* Web 1.0 经典样式 */
-  body {
-    background-color: #c0c0c0;
-    background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
-    color: #000000;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 16px;
-    margin: 8px;
-  }
-  
+  body { background-color: #c0c0c0; background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px); color: #000000; font-family: "Times New Roman", Times, serif; font-size: 16px; margin: 8px; }
   a { color: #0000ee; text-decoration: underline; }
   a:visited { color: #551a8b; }
   a:hover { color: #ff0000; }
-  
   hr { border: 1px inset #808080; margin: 16px 0; }
-
-  .page {
-    max-width: 720px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 4px ridge #00838f;
-    padding: 0;
-  }
-
-  .header {
-    background: #00838f;
-    color: #ffff00;
-    text-align: center;
-    padding: 16px 8px;
-    font-family: "Courier New", monospace;
-  }
-  .header h1 {
-    font-size: 24px;
-    margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0 #000000;
-  }
-
-  .nav {
-    background: #e0e0e0;
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    padding: 6px 10px;
-    font-size: 13px;
-    text-align: center;
-  }
+  .page { max-width: 720px; margin: 0 auto; background: #ffffff; border: 4px ridge #00838f; padding: 0; }
+  .header { background: #00838f; color: #ffff00; text-align: center; padding: 16px 8px; font-family: "Courier New", monospace; }
+  .header h1 { font-size: 24px; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 0 #000000; }
+  .nav { background: #e0e0e0; border-top: 1px solid #808080; border-bottom: 1px solid #808080; padding: 6px 10px; font-size: 13px; text-align: center; }
   .nav a { margin: 0 8px; }
-
   .content { padding: 16px 20px; }
-  
-  .content h2 {
-    font-size: 18px;
-    color: #00838f;
-    border-bottom: 2px solid #00838f;
-    padding-bottom: 4px;
-    margin: 16px 0 8px;
-    font-family: "Courier New", monospace;
-  }
-
-  /* ===== 复古 BBS 留言板样式 ===== */
-  .bbs-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 2px solid #00838f;
-    margin-bottom: 20px;
-  }
-  
-  .bbs-row {
-    border-bottom: 1px solid #a0a0a0;
-  }
-
-  .bbs-header {
-    background: #e0e0e0;
-    padding: 8px;
-    border-bottom: 2px inset #ffffff;
-    font-size: 13px;
-    font-family: "Courier New", monospace;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .bbs-body {
-    background: #ffffff;
-    padding: 12px 16px;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  /* 置顶特殊样式 */
-  .bbs-pinned .bbs-header {
-    background: #ffffcc; /* 经典淡黄底 */
-    border-bottom: 1px solid #cc9900;
-  }
-  .bbs-pinned .bbs-body {
-    background: #fffef2;
-  }
-
-  .user-name {
-    font-weight: bold;
-    color: #00838f;
-  }
-
-  .badge-title {
-    background: #ff0000;
-    color: #ffffff;
-    font-size: 11px;
-    padding: 1px 4px;
-    font-weight: normal;
-    border: 1px solid #000;
-    margin-left: 6px;
-  }
-
-  .badge-admin {
-    background: #ffff00;
-    color: #000000;
-    font-size: 11px;
-    padding: 1px 4px;
-    font-weight: normal;
-    border: 1px solid #000;
-    margin-left: 4px;
-  }
-
-  .time-stamp {
-    color: #666;
-    font-family: "Courier New", monospace;
-    font-size: 12px;
-  }
-
-  /* 经典的凹陷表单样式 */
-  .form-area {
-    background: #e8e8e8;
-    border: 2px inset #ffffff;
-    padding: 16px;
-    margin-top: 20px;
-  }
-  
-  .form-area p {
-    margin-bottom: 12px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #ff0000; /* 红色报错提示 */
-  }
-  
-  .form-area input, .form-area textarea {
-    width: 100%;
-    background: #d0d0d0;
-    border: 2px inset #808080;
-    padding: 6px;
-    margin-bottom: 12px;
-    font-family: "Courier New", monospace;
-    color: #808080;
-    cursor: not-allowed;
-    box-sizing: border-box;
-  }
-  
+  .content h2 { font-size: 18px; color: #00838f; border-bottom: 2px solid #00838f; padding-bottom: 4px; margin: 16px 0 8px; font-family: "Courier New", monospace; }
+  .bbs-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 2px solid #00838f; margin-bottom: 20px; }
+  .bbs-row { border-bottom: 1px solid #a0a0a0; }
+  .bbs-header { background: #e0e0e0; padding: 8px; border-bottom: 2px inset #ffffff; font-size: 13px; font-family: "Courier New", monospace; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .bbs-body { background: #ffffff; padding: 12px 16px; font-size: 14px; line-height: 1.6; }
+  .bbs-pinned .bbs-header { background: #ffffcc; border-bottom: 1px solid #cc9900; }
+  .bbs-pinned .bbs-body { background: #fffef2; }
+  .user-name { font-weight: bold; color: #00838f; }
+  .badge-title { background: #ff0000; color: #ffffff; font-size: 11px; padding: 1px 4px; font-weight: normal; border: 1px solid #000; margin-left: 6px; }
+  .badge-admin { background: #ffff00; color: #000000; font-size: 11px; padding: 1px 4px; font-weight: normal; border: 1px solid #000; margin-left: 4px; }
+  .time-stamp { color: #666; font-family: "Courier New", monospace; font-size: 12px; }
+  .form-area { background: #e8e8e8; border: 2px inset #ffffff; padding: 16px; margin-top: 20px; }
+  .form-area p { margin-bottom: 12px; font-size: 13px; font-weight: bold; color: #ff0000; }
+  .form-area input, .form-area textarea { width: 100%; background: #d0d0d0; border: 2px inset #808080; padding: 6px; margin-bottom: 12px; font-family: "Courier New", monospace; color: #808080; cursor: not-allowed; box-sizing: border-box; }
   .form-area textarea { height: 80px; resize: none; }
-  
-  .submit-btn {
-    background: #c0c0c0;
-    border: 3px outset #ffffff;
-    padding: 4px 16px;
-    font-family: "MS Gothic", "Courier New", monospace;
-    font-weight: bold;
-    color: #808080;
-    cursor: not-allowed;
-    width: auto !important;
-  }
-
-  .footer {
-    background: #e0e0e0;
-    border-top: 2px groove #00838f;
-    padding: 12px;
-    text-align: center;
-    font-size: 11px;
-    color: #404040;
-  }
+  .submit-btn { background: #c0c0c0; border: 3px outset #ffffff; padding: 4px 16px; font-family: "MS Gothic", "Courier New", monospace; font-weight: bold; color: #808080; cursor: not-allowed; width: auto !important; }
+  .footer { background: #e0e0e0; border-top: 2px groove #00838f; padding: 12px; text-align: center; font-size: 11px; color: #404040; }
 </style>
 </head>
 <body>
 
 <div class="page">
-
   <div class="header">
     <h1>★ 留言板 / GUESTBOOK ★</h1>
   </div>
-
-  <!-- 导航栏已全部修复为可点击链接 -->
   <div class="nav">
     <a href="index.html">主页</a> |
     <a href="https://cyan-08.github.io/noodlefan/" target="_blank">我的小说</a> |
@@ -203,15 +48,9 @@
     <a href="guestbook.html">留言板</a> |
     <a href="index.html#links">友情链接</a>
   </div>
-
   <div class="content">
-    
     <h2>■ 游客留言 (Comments)</h2>
-    
-    <!-- 复古 BBS 表格 -->
     <div class="bbs-table">
-      
-      <!-- 置顶留言 -->
       <div class="bbs-row bbs-pinned">
         <div class="bbs-header">
           <div>
@@ -221,45 +60,50 @@
           </div>
           <div class="time-stamp">1970-01-01 08:00:00</div>
         </div>
-        <div class="bbs-body">
-          留言板还在测试阶段哦！
-        </div>
+        <div class="bbs-body">留言板还在测试阶段哦！</div>
       </div>
-
-      <!-- 留白与暂无留言提示 -->
       <div class="bbs-row">
-        <div class="bbs-body" style="text-align: center; color: #999; background: #f9f9f9;">
-          —— 暂无其他留言 ——
-        </div>
+        <div class="bbs-body" style="text-align: center; color: #999; background: #f9f9f9;">—— 暂无其他留言 ——</div>
       </div>
-
     </div>
-
     <hr>
-
     <h2>■ 发表留言 (Leave a Message)</h2>
-    
     <div class="form-area">
       <p>抱歉，您没有权限在此留言。（Error: 403 Forbidden）</p>
-      
-      <!-- 伪表单，全部只读禁用 -->
       <input type="text" placeholder="您的名字" disabled>
       <textarea placeholder="留言内容……" disabled></textarea>
       <button class="submit-btn" disabled>发送留言</button>
     </div>
-
   </div>
-
   <div class="footer">
     Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.<br>
     <span style="color:#808080;">Unix Time: 0</span>
   </div>
+</div>
 
+<!-- ▼ 全局网易云悬浮播放器 ▼ -->
+<div id="netease-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; font-family: 'Courier New', monospace;">
+  <div id="player-toggle" onclick="toggleNeteasePlayer()" style="background: #c0c0c0; border: 3px outset #ffffff; padding: 6px 12px; font-size: 13px; font-weight: bold; cursor: pointer; user-select: none; box-shadow: 3px 3px 8px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 6px;">
+    <span id="toggle-icon">▶</span> BGM 播放器
+  </div>
+  <div id="player-iframe-container" style="display: none; margin-top: 8px; background: #c0c0c0; border: 3px outset #ffffff; padding: 4px; box-shadow: 3px 3px 8px rgba(0,0,0,0.3);">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3340482534&auto=0&height=66"></iframe>
+  </div>
 </div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  if (typeof window.toggleNeteasePlayer !== 'function') {
+    window.toggleNeteasePlayer = function() {
+      const c = document.getElementById('player-iframe-container');
+      const b = document.getElementById('player-toggle');
+      if (c.style.display === 'none' || c.style.display === '') {
+        c.style.display = 'block'; b.innerHTML = '<span id="toggle-icon">▼</span> 收起 BGM'; b.style.border = '3px inset #ffffff'; 
+      } else {
+        c.style.display = 'none'; b.innerHTML = '<span id="toggle-icon">▶</span> BGM 播放器'; b.style.border = '3px outset #ffffff'; 
+      }
+    };
+  }
 </script>
-
 </body>
 </html>
