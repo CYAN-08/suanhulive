@@ -3,119 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 注意这里的标题格式，主页的自动化脚本就是靠抓取这里来生成列表的 -->
 <title>谁说静态网站不能写博客的？我第一个反对 - CYAN-08's Homepage</title>
 <style>
-  /* 沿用 Web 1.0 经典极客风格 */
-  body {
-    background-color: #c0c0c0;
-    background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px);
-    color: #000000;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 16px;
-    margin: 8px;
-  }
+  body { background-color: #c0c0c0; background-image: repeating-linear-gradient(45deg, #c0c0c0 0px, #c0c0c0 2px, #b8b8b8 2px, #b8b8b8 4px); color: #000000; font-family: "Times New Roman", Times, serif; font-size: 16px; margin: 8px; }
   a { color: #0000ee; text-decoration: underline; }
   a:visited { color: #551a8b; }
   a:hover { color: #ff0000; }
   hr { border: 1px inset #808080; margin: 16px 0; }
-
-  .page {
-    max-width: 720px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 4px ridge #00838f;
-    padding: 0;
-  }
-  .header {
-    background: #00838f;
-    color: #ffff00;
-    text-align: center;
-    padding: 16px 8px;
-    font-family: "Courier New", monospace;
-  }
+  .page { max-width: 720px; margin: 0 auto; background: #ffffff; border: 4px ridge #00838f; padding: 0; }
+  .header { background: #00838f; color: #ffff00; text-align: center; padding: 16px 8px; font-family: "Courier New", monospace; }
   .header h1 { font-size: 24px; margin: 0; text-shadow: 2px 2px 0 #000000; }
-  
-  .nav {
-    background: #e0e0e0;
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    padding: 6px 10px;
-    font-size: 13px;
-    text-align: center;
-  }
+  .nav { background: #e0e0e0; border-top: 1px solid #808080; border-bottom: 1px solid #808080; padding: 6px 10px; font-size: 13px; text-align: center; }
   .nav a { margin: 0 8px; }
-
   .content { padding: 20px 24px; line-height: 1.8; }
-  
-  .post-meta {
-    font-size: 13px;
-    color: #666;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-    font-family: "Courier New", monospace;
-  }
-  
+  .post-meta { font-size: 13px; color: #666; border-bottom: 1px dashed #ccc; padding-bottom: 8px; margin-bottom: 16px; font-family: "Courier New", monospace; }
   .content p { margin: 12px 0; }
   .content h3 { color: #00838f; font-family: "Courier New", monospace; font-size: 16px; margin-top: 24px; }
-
-  .footer {
-    background: #e0e0e0;
-    border-top: 2px groove #00838f;
-    padding: 12px;
-    text-align: center;
-    font-size: 11px;
-    color: #404040;
-  }
+  .footer { background: #e0e0e0; border-top: 2px groove #00838f; padding: 12px; text-align: center; font-size: 11px; color: #404040; }
 </style>
 </head>
 <body>
-
 <div class="page">
-  <div class="header">
-    <h1>★ MY BLOG ★</h1>
-  </div>
-
-  <div class="nav">
-    <a href="index.html">← 返回主页</a>
-  </div>
-
+  <div class="header"><h1>★ MY BLOG ★</h1></div>
+  <div class="nav"><a href="index.html">← 返回主页</a></div>
   <div class="content">
     <h2>谁说静态网站不能写博客的？我第一个反对</h2>
-    <div class="post-meta">
-      发布时间：2026-11-24 | 作者：CYAN-08 | 分类：随笔
-    </div>
-    
+    <div class="post-meta">发布时间：2026-11-24 | 作者：CYAN-08 | 分类：随笔</div>
     <p>今天在网上冲浪的时候，看到一条评论：“你这只放了一个网页，怎么不发点日常？静态网站根本没法像 WordPress 那样写博客吧？”</p>
-    
     <p>看到这句话，我作为一个 Web 1.0 复古极客，当场就坐不住了。谁跟你说静态网站不能写博客的？我第一个反对！</p>
-
     <h3>■ 博客的本质是什么？</h3>
     <p>很多人被现在的平台惯坏了，以为写博客必须要有一个巨大的后台，要有“富文本编辑器”，要有“发布按钮”，要有数据库把你的文字吞进去再吐出来。</p>
     <p>但实际上，博客的本质就是<b>“按时间顺序排列的文章”</b>。</p>
     <p>在静态网站上，我根本不需要什么后台数据库。我只要新建一个 <code>blog-3.html</code> 网页文件，把文字敲进去，传到 GitHub 上。它就安安静静地躺在那里，直到世界末日（或者 GitHub 倒闭）都不会丢。</p>
-
     <h3>■ 甚至不用手动改主页</h3>
     <p>如果你觉得每次写完文章还要去改主页的链接太麻烦，那就太小看 JavaScript 了。</p>
     <p>我的主页现在装了一个“自动雷达”。只要你把名为 <code>blog-X.html</code> 的文件扔进服务器，主页加载的时候，脚本就会自动去探测这些文件。只要文件存在，它就会自动把标题和链接抓取出来，排在主页的列表上。</p>
     <p>纯前端实现，不需要 PHP，不需要 Node.js，全靠浏览器原生计算。</p>
-
     <h3>■ 静态博客的极致自由</h3>
     <p>没有平台会封你的号，没有敏感词审查（只要 Github 不管），没有乱七八糟的广告。而且它的加载速度极快，因为你打开的仅仅是几 KB 的纯文本 HTML。</p>
     <p>这就是极客的浪漫。用最简单的技术，搭最稳固的堡垒。所以，别再说静态网站不能写博客了，不仅今天要写，以后我还会一直在这里更新！</p>
-
     <hr>
     <p style="font-size: 13px; color: #666;">※ 除非另有声明，本文章采用 CC-BY-NC-SA 协议进行许可，转载请注明作者「CYAN-08」及原文链接。</p>
   </div>
+  <div class="footer">Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.</div>
+</div>
 
-  <div class="footer">
-    Copyright &copy; <span id="year"></span> CYAN-08. All Rights Reserved.
+<!-- ▼ 全局网易云悬浮播放器 ▼ -->
+<div id="netease-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; font-family: 'Courier New', monospace;">
+  <div id="player-toggle" onclick="toggleNeteasePlayer()" style="background: #c0c0c0; border: 3px outset #ffffff; padding: 6px 12px; font-size: 13px; font-weight: bold; cursor: pointer; user-select: none; box-shadow: 3px 3px 8px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 6px;">
+    <span id="toggle-icon">▶</span> BGM 播放器
+  </div>
+  <div id="player-iframe-container" style="display: none; margin-top: 8px; background: #c0c0c0; border: 3px outset #ffffff; padding: 4px; box-shadow: 3px 3px 8px rgba(0,0,0,0.3);">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3340482534&auto=0&height=66"></iframe>
   </div>
 </div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  if (typeof window.toggleNeteasePlayer !== 'function') {
+    window.toggleNeteasePlayer = function() {
+      const c = document.getElementById('player-iframe-container');
+      const b = document.getElementById('player-toggle');
+      if (c.style.display === 'none' || c.style.display === '') {
+        c.style.display = 'block'; b.innerHTML = '<span id="toggle-icon">▼</span> 收起 BGM'; b.style.border = '3px inset #ffffff'; 
+      } else {
+        c.style.display = 'none'; b.innerHTML = '<span id="toggle-icon">▶</span> BGM 播放器'; b.style.border = '3px outset #ffffff'; 
+      }
+    };
+  }
 </script>
 </body>
 </html>
