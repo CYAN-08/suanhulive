@@ -5,10 +5,10 @@
   <link>https://cyan-08.github.io/suanhulive/</link>
   <description>CYAN-08 的个人空间。喜欢青色、Undertale、Minecraft，偶尔写写小说。</description>
   <language>zh-CN</language>
-  <lastBuildDate>Mon, 24 Nov 2026 00:00:00 +0800</lastBuildDate>
+  <lastBuildDate>Mon, 24 Nov 2026 12:00:00 +0800</lastBuildDate>
   <atom:link href="https://cyan-08.github.io/suanhulive/feed.xml" rel="self" type="application/rss+xml" />
 
-  <!-- 博客文章 2 -->
+  <!-- 博客文章 2 (最新) -->
   <item>
     <title>谁说静态网站不能写博客的？我第一个反对</title>
     <link>https://cyan-08.github.io/suanhulive/blog-2.html</link>
@@ -24,15 +24,6 @@
     <guid>https://cyan-08.github.io/suanhulive/blog-1.html</guid>
     <pubDate>Sun, 15 Nov 2026 12:00:00 +0800</pubDate>
     <description>白嫖 GitHub 服务器，用最纯粹的技术搭建自己的个人网站。</description>
-  </item>
-
-  <!-- 站点更新记录 -->
-  <item>
-    <title>留言板测试上线与站点功能完善</title>
-    <link>https://cyan-08.github.io/suanhulive/guestbook.html</link>
-    <guid>https://cyan-08.github.io/suanhulive/guestbook.html</guid>
-    <pubDate>Sun, 15 Nov 2026 08:00:00 +0800</pubDate>
-    <description>全新的复古 BBS 留言板已开放参观。同时添加了 CC 版权声明、社交账号链接和自动博客列表。</description>
   </item>
 </channel>
 </rss>
